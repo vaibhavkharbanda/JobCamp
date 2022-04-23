@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="student.css">
+<br><br><br><br><br>    
+<form action="/students/createStudent" method="post">
+    <div id="basic-details">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="College Name" name="college">
+        <select name="placement_status" id="placement_status" ng-model="ps">
+            <option value="placed" ng-repeat="role_type in roles" >Placed</option>
+            <option value="not-placed" ng-repeat="role_type in roles">Not Placed</option>
+        </select>
+    </div>
+    <div id="course-score">
+        <input type="number" placeholder="DSA Score" name="dsa_score">
+        <input type="number" placeholder="Web-D Final Score" name="webd_score">
+        <input type="number" placeholder="React Score" name="react_score">
+        <input type="submit" value="Add Student">
+    </div>
+
+</form>

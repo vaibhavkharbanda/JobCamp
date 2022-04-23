@@ -1,0 +1,27 @@
+{
+  "name": "jobportal",
+  "version": "1.0.0",
+  "description": "Project on job portal with students details and the interviews scheduled for them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vaibhav Kharbanda",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.3.0",
+    "multer": "^1.4.4",
+    "node-sass-middleware": "^1.0.1",
+    "noty": "^3.2.0-beta-deprecated",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "sass": "^1.50.1"
+  }
+}

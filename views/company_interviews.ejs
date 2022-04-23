@@ -1,0 +1,18 @@
+
+<div class="d-inline-flex p-2 bd-highlight">
+
+
+<% for(i of interviews){%>
+<div class="card " style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= i.title %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%=i.companyName %></h6>
+      <p class="card-text"><%= i.discription %></p>
+      <p class="card-text"><%= i.date %></p>
+      <a href="/interviews/interview-profile/<%= i.id%>" class="card-link">Learn More</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+
+  <%}%>
+</div>

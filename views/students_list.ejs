@@ -1,0 +1,27 @@
+<h2 style="text-align:center">Students List </h2>
+<br>
+<table class="table table-hover table-striped text-center">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">College</th>
+            <th scope="col">Placement Status</th>
+            <th scope="col" colspan="3">Final Scores (DSA, WEB-D, REACT)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for(i of students){%>
+            <tr>
+                <th scope="row">1</th>
+                <td><%=i.name%></td>
+                <td><%=i.college%></td>
+                <td><%=i.placement_status%></td>
+                <td><%=i.dsa_score%></td>
+                <td><%=i.webd_score%></td>
+                <td><%=i.react_score%></td>
+            </tr>   
+        <%}%>
+    </tbody>
+
+</table>
