@@ -4,6 +4,7 @@
   "description": "Project on job portal with students details and the interviews scheduled for them",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vaibhav Kharbanda",
