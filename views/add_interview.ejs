@@ -1,7 +1,10 @@
+<link rel="stylesheet" href="/css/addInterviews.css">
+<br>
+<h3 class="text-center">Add interview</h3>
 <form action="/interviews/post-interview" method="post" >
-    <input type="text" name="companyName" placeholder="Company Name">
-    <input type="text" name="title" placeholder="Job Profile">
-    <input type="date" name="date" placeholder="Date of Interview">
-    <textarea name="discription"  cols="30" rows="10" placeholder="Job Discription......"></textarea>
-    <input type="submit" value="Schedule Interview">
+    <div ><label for="companyName">Company Name: </label><input type="text" name="companyName" placeholder="Company Name"></div>
+    <div><label for="title">Position: </label><input type="text" name="title" placeholder="Job Profile"></div>
+    <div><label for="Date">Date of Interview: </label><input type="date" name="date" placeholder="Date of Interview"></div>
+    <div><label for="discription">Job Description: </label><textarea name="discription"  cols="30" rows="10" placeholder="Job Discription......"></textarea></div>
+    <div><input type="submit" value="Schedule Interview"></div>
 </form>

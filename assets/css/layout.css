@@ -1,0 +1,9 @@
+body {
+  background: #c2c2c2;
+  background: linear-gradient(180deg, #c2c2c2 12%, #7a7a7a 31%, #6f6f6f 63%, #424242 88%, black 99%);
+  background-attachment: fixed;
+}
+.mg-center{
+  margin-right: 46%;
+  margin-left: 47%;
+}

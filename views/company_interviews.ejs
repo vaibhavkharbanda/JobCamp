@@ -1,18 +1,22 @@
 
-<div class="d-inline-flex p-2 bd-highlight">
-
+<link rel="stylesheet" href="/css/interviews.css">
+<br>
+<h3 class="text-center">Companies for Interview</h3><br>
+<a href="/interviews/add-interview" class="btn btn-success mg-center ">Add Interview</a><br><br>
+<div id="job-cards" class="d-flex flex-wrap justify-content-center">
 
 <% for(i of interviews){%>
-<div class="card " style="width: 18rem;">
-    <div class="card-body">
+<div class="card m-3 text-center bg-dark text-white"  style="width: 18rem;" id="job-card">
+    <div class="card-body" >
       <h5 class="card-title"><%= i.title %></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><%=i.companyName %></h6>
+      <h6 class="card-subtitle mb-2 text-info"><%=i.companyName %></h6>
       <p class="card-text"><%= i.discription %></p>
-      <p class="card-text"><%= i.date %></p>
-      <a href="/interviews/interview-profile/<%= i.id%>" class="card-link">Learn More</a>
-      <a href="#" class="card-link">Another link</a>
+      <p class="card-text text-secondary">Interview on: <%= i.date %></p>
+      <a href="/interviews/interview-profile/<%= i.id%>" class="card-link">Apply Now</a>
     </div>
   </div>
 
   <%}%>
 </div>
+
+

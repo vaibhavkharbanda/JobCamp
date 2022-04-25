@@ -54,12 +54,12 @@ module.exports.create = function (req, res) {
     }
 
     User.findOne({ email: req.body.email }, function (err, user) {
-        if (err) { req.flash('error in finding user in signing up'); return }
+        if (err) { req.flash('error','error in finding user in signing up'); return }
 
         if (!user) {
             User.create(req.body, function (err, user) {
-                if (err) { req.flash('error in creating user in signing up'); return }
-                req.flash(user +"Created");
+                if (err) { req.flash('error','error in creating user in signing up'); return }
+                req.flash('success', "user "+user.name +" Created");
                 return res.redirect('/users/sign-in');
             });
         }
@@ -68,4 +68,28 @@ module.exports.create = function (req, res) {
         }
     });
 
+}
+
+module.exports.changeDetails = function(req,res){
+    if(req.user.id== req.params.id){
+        User.findById(req.params.id,function(err,user){
+            if(err){
+                console.log('unable to edit user: ',err);
+            return res.redirect('back');
+            }
+            return res.render('user_edit',{
+                title:"Student Update",
+                users:user
+            })
+        });
+    }
+}
+module.exports.update= function(req,res){
+    if(req.user.id== req.params.id){
+        User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
+            return res.redirect('back');
+        });
+    }else{
+        return res.status(401).send('Unauthorized');
+    }
 }

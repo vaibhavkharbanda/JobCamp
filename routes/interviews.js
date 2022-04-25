@@ -9,7 +9,7 @@ router.get('/add-interview',interviewController.scheduleInterview);
 router.post('/post-interview',interviewController.create);
 router.get('/interviews-lists',interviewController.lists);
 router.get('/interview-profile/:id',interviewController.profile);
-
+router.post('/apply-interview/:id',interviewController.apply);
 
 
 

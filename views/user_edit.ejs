@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/signIn.css">
+
+<br>
+<h1 class="text-center">Update Profile</h1>
+<br><br>
+<form action="/users/update/<%=users.id%>" method="post" class="text-center">
+    </label><input type="text" name="name" placeholder="Your Name" required value="<%=users.name%>">
+    <input type="email" name="email" placeholder="Your Email" required value="<%=users.email%>">
+    <input type="password" name="password" placeholder="password" required value="<%=users.password%>">
+    <input type="password" name="confirm_password" placeholder="password" required value="<%=users.password%>">
+    <input type="submit" value="Update">
+</form>

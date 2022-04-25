@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/student.css">
+<br><br>
+<h3 class="text-center"> Add Student Details </h3> ><br><br><br>
+<form action="/students/update/<%=students.id%>" method="post" >
+    <div id="form-flex">
+        <div id="basic-details">
+            <input type="text" placeholder="Name" name="name" required class="inputs" value="<%=students.name%>">
+            <input type="text" placeholder="College Name" name="college" class="inputs"  value="<%=students.college%>">
+            <select name="placement_status" id="placement_status" ng-model="ps" class="inputs" value="<%=students.placement_status%>">
+                <option value="placed" ng-repeat="role_type in roles">Placed</option>
+                <option value="not-placed" ng-repeat="role_type in roles">Not Placed</option>
+            </select>
+        </div>
+        <div id="course-score">
+            <input type="text" placeholder="Batch" name="batch" class="inputs"  value="<%=students.batch%>">
+            <input type="number" placeholder="DSA Score" name="dsa_score" class="inputs" value="<%=students.dsa_score%>">
+            <input type="number" placeholder="Web-D Final Score" name="webd_score" class="inputs" value="<%=students.webd_score%>">
+            <input type="number" placeholder="React Score" name="react_score" class="inputs" value="<%=students.react_score%>">
+
+        </div>
+    </div>
+    <input type="submit" value="Update Student" class="text-center" id="student-submit">
+
+</form>

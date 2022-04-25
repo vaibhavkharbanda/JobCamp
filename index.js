@@ -12,6 +12,9 @@ const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 
 
+//use static files
+app.use(express.static('./assets'));
+
 
 //using sass(css) as middleware 
 app.use(sassMiddleware({
@@ -27,8 +30,7 @@ app.use(sassMiddleware({
 app.use(express.urlencoded({ extended: true }));
 app.use(expressLayouts);
 
-//use static files
-app.use(express.static('./assets'));
+
 
 
 //Setup view engine

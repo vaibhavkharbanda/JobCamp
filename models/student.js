@@ -1,5 +1,5 @@
 const mongoose= require('mongoose');
-
+const Interview= require('../models/interview')
 
 const studentSchema = new  mongoose.Schema({
     name:{
@@ -9,6 +9,9 @@ const studentSchema = new  mongoose.Schema({
     college:{
         type:String,
         required:true,
+    },
+    batch:{
+        type:String
     },
     placement_status:{
         type:String,
@@ -21,7 +24,12 @@ const studentSchema = new  mongoose.Schema({
     },
     react_score:{
         type:Number
-    }
+    },
+    company:[{
+        type:mongoose.Types.ObjectId,
+        ref:'Interview'
+
+    }]
 },{
     timestamps:true
 });

@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/student_profile.css">
+<br><br><br><br>
+<div class="wrappe">
+    <div class="profile-card js-profile-card">
+      <div class="profile-card__img">
+        <img src="/images/profile.jpg" alt="profile card">
+      </div>
+  
+      <div class="profile-card__cnt js-profile-cnt">
+        <div class="profile-card__name"><%=students.name%></div>
+        <div class="profile-card__txt"><%=students.college%> - &nbsp;<strong><%=students.batch%></strong>
+        </div>
+        <div class="profile-card-loc">
+          <span class="profile-card-loc__icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </span>
+  
+          <span class="profile-card-loc__txt">
+            <%if(students.placement_status=='not-placed'){%>
+                <strong> Not Placed</strong>
+                <%}else{%>
+                    <strong>Placed</strong>
+                <%}%>
+          </span>
+        </div>
+  
+        <div class="profile-card-inf">
+          <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title"><%=students.dsa_score%></div>
+            <div class="profile-card-inf__txt">DSA Score</div>
+          </div>
+  
+          <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title"><%=students.webd_score%></div>
+            <div class="profile-card-inf__txt">Web-D SCore </div>
+          </div>
+  
+          <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title"><%=students.react_score%></div>
+            <div class="profile-card-inf__txt">React Score</div>
+          </div>
+  
+        </div>
+  
+  
+        <div class="profile-card-ctr">
+          <a class="profile-card__button button--blue js-message-btn" href="/students/edit/<%=students.id%>">Edit</a>
+          
+        </div>
+      </div>
+  
+      
+  
+  </div>
+  

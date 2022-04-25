@@ -1,0 +1,29 @@
+#form-flex{
+    display: flex;
+    margin: auto;
+}
+#basic-details{
+    width: 50%;
+    margin:auto ;
+    margin-left:30%;
+    border-right: 1px solid black;
+    padding: auto;
+}
+
+#course-score{
+    margin:auto;
+    margin-right:30%;
+    width: 50%;
+    border-left: 1px solid black;
+}
+
+.inputs{
+    margin: 6px auto;
+    display: block;
+}
+
+#student-submit{
+    margin-top: 20px;
+    margin-left: 47%;
+    margin-right: 45%;
+}
